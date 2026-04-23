@@ -12,15 +12,11 @@
 /* 🔥 最优字体：EB Garamond 学术高级款 */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
 
-<style>
-/* 你喜欢的 3号字体 EB Garamond */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
-
 body {
      font-family: "Georgia", serif;
     margin: 0 5%;
     background-color: #f0f0f0;
-    line-height: 1.3;
+    line-height: 1.25; /* 全局行间距缩小 */
     font-size: 15px;
     
     /* 👈 这里加深！不再淡！ */
@@ -58,12 +54,12 @@ a:hover {
 
 hr {
     border: 1px solid #ddd;
-    margin: 30px 0;
+    margin: 20px 0; /* 分割线间距缩小 */
 }
 
 .info-unit {
     width: 100%;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 15px auto;
     padding: 0;
 }
 
@@ -97,16 +93,23 @@ hr {
 .about-text {
     flex: 1;
     text-align: left;
-    line-height: 1.65;
+    line-height: 1.5; /* 简介行间距缩小 */
     font-size: 16.5px;
 }
 
+/* 🔥 核心： Publications 专用样式，行距大幅缩小 */
+.publications p {
+    line-height: 1.2 !important;
+    margin: 2px 0 !important; /* 论文条目之间的距离 */
+    padding: 0 !important;
+}
+
 p {
-    margin: 0 0 10px 0;
+    margin: 0 0 6px 0;
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 </style>
 </head>
@@ -151,7 +154,8 @@ li {
         </section>
 
         <hr/>
-        <section class="edu info-unit">
+        <!-- 给 Publications 添加专用类名 -->
+        <section class="edu info-unit publications">
             <h2>
                 Publications and Preprints
                 <a href="https://arxiv.org/a/liu_j_19.html"><img src="arxiv.jpg" width="26" height="26" alt="arxiv"></a>
