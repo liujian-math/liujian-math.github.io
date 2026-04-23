@@ -12,13 +12,20 @@
 /* 🔥 最优字体：EB Garamond 学术高级款 */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
 
+<style>
+/* 你喜欢的 3号字体 EB Garamond */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
+
 body {
     font-family: 'EB Garamond', Georgia, serif;
     margin: 0 5%;
     background-color: #f0f0f0;
     line-height: 1.7;
     font-size: 16.5px;
-    color: #333;
+    
+    /* 👈 这里加深！不再淡！ */
+    color: #111; 
+    font-weight: 500;
 } 
 
 .content {
@@ -35,13 +42,14 @@ header {
 h1, h2 {
     font-family: 'EB Garamond', serif;
     color: #1877b2;
-    font-weight: 600;
+    font-weight: 600; /* 标题更粗一点 */
     margin-top: 0;
 }
 
 a {
     color: #1877b2;
     text-decoration: none;
+    font-weight: 500; /* 链接也加深 */
 }
 
 a:hover {
@@ -59,7 +67,6 @@ hr {
     padding: 0;
 }
 
-/* 头像 + 邮箱 */
 .profile-box {
     flex-shrink: 0;
     width: 220px;
@@ -74,8 +81,9 @@ hr {
 }
 
 .email-small {
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
+    font-weight: 500;
 }
 
 /* 👑 关键：文字靠上对齐，最协调 */
