@@ -11,59 +11,117 @@
  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
  
-   <style>
-   body {
- font-family: "Georgia", serif; /* 使用非黑体字体，如Raleway或衬线字体 */
-  text-align: left;
-    margin: 0 10%; /* 两侧留白 */
-            background-color: #f0f0f0; /* 浅灰色背景 */
-   } 
+      <style>
+        body {
+            font-family: "Georgia", serif;
+            margin: 0 10%;
+            background-color: #f0f0f0;
+        } 
 
-.content {
-    max-width: 900px; /* 限制内容宽度 */
-    margin: 0 auto; /* 水平居中 */
-    padding: 20px; /* 内边距 */
-}
-profile-image {
-    flex-shrink: 0; /* 防止图片缩小 */
-    margin-right: 20px; /* 图片与文字之间的间距 */
-  }
- </style>
- 
-<!-- Page Content -->
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-white">
-  <div  align="center">  
-   <h1 style="color: #1877b2;"> <i class="fa fa-graduation-cap" aria-hidden="true"></i> Welcome to Jian Liu (刘剑)’s Homepage！</h1>
-    <img src="jianliu.jpg" alt="alps" class="w3-rouded" width="380" height="214"> 
-    
-  <h2 >  <img src="email.jpg" alt="alps" class="w3-rouded" width="35" height="23">  <a href="mailto:jianliu@ccnu.edu.cn" targert="_blank" style="color: #1877b2;" > jianliu@ccnu.edu.cn</a>  </h2>
-    </div>
+        /* 头部标题样式 */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
+        h1 {
+            color: #1877b2;
+        }
 
-            <section class="main">
+        /* 核心：左右布局容器 */
+        .about-container {
+            display: flex;        /* 弹性布局，实现左右并排 */
+            align-items: center;  /* 垂直居中对齐 */
+            gap: 30px;            /* 头像和文字之间的间距 */
+            margin: 20px 0;
+        }
 
-<!-- About -->
- <hr/><section class="edu info-unit">
-             <h2>
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>About me <a href="http://maths.ccnu.edu.cn/info/1041/28500.htm" style="color: #1c98c9;">  <img src="ccnu.png" alt="alps" class="w3-rouded"  width="24" height="24" > </a> </h2>
-             
-              <ul>  I am working in <a href="http://maths.ccnu.edu.cn/" targert="_blank"  style="color: #1877b2;">Mathematics</a> at the <a href="https://www.ccnu.edu.cn/" targert="_blank"  style="color: #1877b2;">Central China Normal University</a>(June 2023--). My office is 418 (Math building). 
-                    Before this, I was a postdoc in Mathematics at the <a href="https://www.math.sjtu.edu.cn/" targert="_blank"  style="color: #1877b2;">Shanghai Jiao Tong University</a>(July 2021--June 2023).
-                  My postdoc mentor is Prof. <a href="https://www.math.sjtu.edu.cn/Default/teachershow/tags/MDAwMDAwMDAwMLKIipk"  target="_blank"  style="color: #1877b2;">Pu Zhang</a>.
-                                              I finished my PhD in Mathematics at the <a href="http://math.ustc.edu.cn/"  targe="_blank" class="w3-text-blue"  style="color: #1877b2;">University of Science and Technology of China</a>
-   (September 2016--June 2021 ). From August 15 2019 to  October 9 2020, I visited the
-  <a href="https://www.math.utah.edu/" target="_blank" class="w3-text-blue" style="color: #1877b2;" >University of Utah</a>. My Ph.D. advisors are Prof. <!-- Footer -->
-   <a href="http://home.ustc.edu.cn/~xwchen/" target="_blank" class="w3-text-blue" style="color: #1877b2;">Xiao-Wu Chen</a>
-  <!-- End footer --> and Prof. <a href="https://www.math.utah.edu/~iyengar/" target="_blank" class="w3-text-blue" style="color: #1877b2;">Srikanth Iyengar</a>. My research interests are derived categories, commutative algebras and representation theory of finite dimensional algebras.
-  Here is my <a href="https://liujian-math.github.io/CV.pdf" target="_blank" class="w3-text-blue" style="color: #1877b2;">English CV</a> (Chinese CV <a href="https://liujian-math.github.io/简历.pdf" target="_blank" class="w3-text-blue" style="color: #1877b2;" >中文简历</a>).
-                 Apart from the research, I like watching cartoons, playing table tennis, and climbing mountains. 
-             
-                    <ul/>
-                    </section>
+        /* 头像样式 */
+        .profile-img {
+            width: 180px;         /* 头像大小 */
+            height: auto;
+            border-radius: 8px;    /* 圆角 */
+            flex-shrink: 0;        /* 防止图片被压缩 */
+        }
+
+        /* 文字内容区域 */
+        .about-text {
+            flex: 1;               /* 自动占满剩余宽度 */
+            text-align: left;
+            line-height: 1.6;      /* 行高，更易读 */
+        }
+
+        h2 {
+            color: #1877b2;
+            margin-top: 0;
+        }
+
+        a {
+            color: #1877b2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <!-- 头部 -->
+        <header>
+            <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Welcome to Jian Liu (刘剑)’s Homepage！</h1>
+            <h2>
+                <img src="email.jpg" alt="email" width="35" height="23"> 
+                <a href="mailto:jianliu@ccnu.edu.cn">jianliu@ccnu.edu.cn</a>
+            </h2>
+        </header>
+
+        <hr/>
+
+        <!-- About Me 左右布局核心区域 -->
+        <section class="edu info-unit">
+            <h2>
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i> About me 
+                <a href="http://maths.ccnu.edu.cn/info/1041/28500.htm">
+                    <img src="ccnu.png" alt="ccnu" width="24" height="24">
+                </a>
+            </h2>
+
+            <!-- 左右并排容器 -->
+             <!-- 左侧：介绍文字 -->
+                <div class="about-text">
+                    I am working in <a href="http://maths.ccnu.edu.cn/">Mathematics</a> at the <a href="https://www.ccnu.edu.cn/">Central China Normal University</a> (June 2023--). My office is 418 (Math building). 
+                    Before this, I was a postdoc in Mathematics at the <a href="https://www.math.sjtu.edu.cn/">Shanghai Jiao Tong University</a> (July 2021--June 2023).
+                    My postdoc mentor is Prof. <a href="https://www.math.sjtu.edu.cn/Default/teachershow/tags/MDAwMDAwMDAwMLKIipk" target="_blank">Pu Zhang</a>.
+                    I finished my PhD in Mathematics at the <a href="http://math.ustc.edu.cn/">University of Science and Technology of China</a>
+                    (September 2016--June 2021 ). From August 15 2019 to October 9 2020, I visited the
+                    <a href="https://www.math.utah.edu/" target="_blank">University of Utah</a>. My Ph.D. advisors are Prof. 
+                    <a href="http://home.ustc.edu.cn/~xwchen/" target="_blank">Xiao-Wu Chen</a> and Prof. <a href="https://www.math.utah.edu/~iyengar/" target="_blank">Srikanth Iyengar</a>. 
+                    My research interests are derived categories, commutative algebras and representation theory of finite dimensional algebras.
+                    Here is my <a href="https://liujian-math.github.io/CV.pdf" target="_blank">English CV</a> (Chinese CV <a href="https://liujian-math.github.io/简历.pdf" target="_blank">中文简历</a>).
+                    Apart from the research, I like watching cartoons, playing table tennis, and climbing mountains.
+              
+
   
-  
+            <div class="about-container">
+                <!-- 右侧：头像 -->
+                <img src="jianliu.jpg" alt="Jian Liu" class="profile-img">
+                
+          </div>
+            </div>     
   
   
 
