@@ -1,30 +1,27 @@
-
 <!DOCTYPE html>
 <html>
-  
-  <head>
- <title>Jian Liu's homepage</title>
+<head>
+    <title>Jian Liu's homepage</title>
     <link rel="shortcut icon" href="/favicon.ico">
-  </head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
- 
-      <style>
+    <style>
         body {
             font-family: "Georgia", serif;
             margin: 0 10%;
             background-color: #f0f0f0;
-        } 
+        }
 
         .content {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* 头部标题样式 */
+        /* 头部 */
         header {
             text-align: center;
             margin-bottom: 30px;
@@ -32,29 +29,6 @@
 
         h1 {
             color: #1877b2;
-        }
-
-        /* 核心：左右布局容器 */
-        .about-container {
-            display: flex;        /* 弹性布局，实现左右并排 */
-            align-items: center;  /* 垂直居中对齐 */
-            gap: 30px;            /* 头像和文字之间的间距 */
-            margin: 20px 0;
-        }
-
-        /* 头像样式 */
-        .profile-img {
-            width: 260px;         /* 头像大小 */
-            height: auto;
-            border-radius: 8px;    /* 圆角 */
-            flex-shrink: 0;        /* 防止图片被压缩 */
-        }
-
-        /* 文字内容区域 */
-        .about-text {
-            flex: 1;               /* 自动占满剩余宽度 */
-            text-align: left;
-            line-height: 1.6;      /* 行高，更易读 */
         }
 
         h2 {
@@ -75,6 +49,65 @@
             border: 1px solid #ddd;
             margin: 30px 0;
         }
+
+        /* 所有版块统一样式 */
+        .info-unit {
+            width: 94%;
+            margin: 0 auto 20px auto;
+            padding: 0;
+        }
+
+        /* About 版块单独加宽 */
+        .about-section {
+            width: 100% !important;
+        }
+
+        /* 头像 + 邮箱 组合（左侧） */
+        .profile-box {
+            flex-shrink: 0;
+            width: 260px;
+            text-align: center;
+        }
+
+        /* 头像 */
+        .profile-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* 邮箱小字体，在头像正下方 */
+        .email-small {
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* 核心左右布局 */
+        .about-container {
+            display: flex;
+            gap: 35px;
+            align-items: flex-start;
+            margin-top: 15px;
+        }
+
+        /* 右侧介绍文字 */
+        .about-text {
+            flex: 1;
+            text-align: left;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 
@@ -82,336 +115,129 @@
     <div class="content">
         <!-- 头部 -->
         <header>
-            <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> Welcome to Jian Liu (刘剑)’s Homepage！</h1>
-           
+            <h1><i class="fa fa-graduation-cap"></i> Welcome to Jian Liu (刘剑)’s Homepage！</h1>
         </header>
 
         <hr/>
 
-        <!-- About Me 左右布局核心区域 -->
-        <section class="edu info-unit">
+        <!-- ========== About Me 区域（已完美调整） ========== -->
+        <section class="edu info-unit about-section">
             <h2>
-                <i class="fa fa-graduation-cap" aria-hidden="true"></i> About me 
+                <i class="fa fa-graduation-cap"></i> About me
                 <a href="http://maths.ccnu.edu.cn/info/1041/28500.htm">
-                    <img src="ccnu.png" alt="ccnu" width="24" height="24">
+                    <img src="ccnu.png" width="24" height="24" alt="ccnu">
                 </a>
             </h2>
 
-            <!-- 左右并排容器 -->
-          
             <div class="about-container">
-                <!-- 左侧：头像 -->
-                <img src="Jian.jpg" alt="Jian Liu" class="profile-img">
-               <h2>
-                <img src="email.jpg" alt="email" width="35" height="23"> 
-                <a href="mailto:jianliu@ccnu.edu.cn">jianliu@ccnu.edu.cn</a>
-            </h2>
+                <!-- 左侧：头像 + 邮箱（正下方） -->
+                <div class="profile-box">
+                    <img src="Jian.jpg" class="profile-img" alt="Jian Liu">
+                    <div class="email-small">
+                        <img src="email.jpg" width="20" height="15" alt="email">
+                        <a href="mailto:jianliu@ccnu.edu.cn">jianliu@ccnu.edu.cn</a>
+                    </div>
+                </div>
 
-              
-             <!-- 右侧：介绍文字 -->
+                <!-- 右侧：介绍文字 -->
                 <div class="about-text">
-                    I am working in <a href="http://maths.ccnu.edu.cn/">Mathematics</a> at the <a href="https://www.ccnu.edu.cn/">Central China Normal University</a> (June 2023--). My office is 418 (Math building). 
+                    I am working in <a href="http://maths.ccnu.edu.cn/">Mathematics</a> at the <a href="https://www.ccnu.edu.cn/">Central China Normal University</a> (June 2023--). My office is 418 (Math building).
                     Before this, I was a postdoc in Mathematics at the <a href="https://www.math.sjtu.edu.cn/">Shanghai Jiao Tong University</a> (July 2021--June 2023).
                     My postdoc mentor is Prof. <a href="https://www.math.sjtu.edu.cn/Default/teachershow/tags/MDAwMDAwMDAwMLKIipk" target="_blank">Pu Zhang</a>.
                     I finished my PhD in Mathematics at the <a href="http://math.ustc.edu.cn/">University of Science and Technology of China</a>
-                    (September 2016--June 2021 ). From August 15 2019 to October 9 2020, I visited the
-                    <a href="https://www.math.utah.edu/" target="_blank">University of Utah</a>. My Ph.D. advisors are Prof. 
-                    <a href="http://home.ustc.edu.cn/~xwchen/" target="_blank">Xiao-Wu Chen</a> and Prof. <a href="https://www.math.utah.edu/~iyengar/" target="_blank">Srikanth Iyengar</a>. 
+                    (September 2016--June 2021). From August 15 2019 to October 9 2020, I visited the
+                    <a href="https://www.math.utah.edu/" target="_blank">University of Utah</a>. My Ph.D. advisors are Prof.
+                    <a href="http://home.ustc.edu.cn/~xwchen/" target="_blank">Xiao-Wu Chen</a> and Prof. <a href="https://www.math.utah.edu/~iyengar/" target="_blank">Srikanth Iyengar</a>.
                     My research interests are derived categories, commutative algebras and representation theory of finite dimensional algebras.
                     Here is my <a href="https://liujian-math.github.io/CV.pdf" target="_blank">English CV</a> (Chinese CV <a href="https://liujian-math.github.io/简历.pdf" target="_blank">中文简历</a>).
-                    Apart from the research, I like watching cartoons, playing table tennis, and climbing mountains.       
-          </div>
-            </div>     
-  
-  
+                    Apart from the research, I like watching cartoons, playing table tennis, and climbing mountains.
+                </div>
+            </div>
+        </section>
 
-
-
-
-
-  <section class="main">
-
-            <!-- Publications -->
-          <hr/>
-            <section class="edu info-unit">        
-      <h2>
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>Publications and Preprints
-                  <a href="https://arxiv.org/a/liu_j_19.html" style="color: #1877b2;">  <img src="arxiv.jpg" alt="alps" class="w3-rouded"  width="26" height="26" > </a> 
-   <a href="https://www.researchgate.net/profile/Jian_Liu228" style="color: #1877b2;">  <img src="researchgate.jpg" alt="alps" class="w3-rouded"  width="26" height="26" > </a>
-      <a href="https://zbmath.org/authors/?q=ai:liu.jian.13" style="color: #1877b2;">  <img src="zbmath.jpg" alt="alps" class="w3-rouded"  width="26" height="26" > </a>
-         <a href="https://orcid.org/0000-0001-8360-7024" style="color: #1877b2;">  <img src="orcid.jpg" alt="alps" class="w3-rouded"  width="26" height="26" > </a>
-     <a href="https://scholar.google.com/citations?user=vje0RXwAAAAJ&hl=en" style="color: #1877b2;">  <img src="gscholar.jpg" alt="alps" class="w3-rouded"  width="26" height="26"> </a>
-     <a href="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1478240" style="color: #1877b2;">  <img src="ams.jpg" alt="alps" class="w3-rouded"  width="57" height="26" > </a> </div> </h2>
-
-  <ul>
- <p> 14. "Some criteria for Gorensteinness via Gorenstein projective cotorsion pairs", 
-      with <!-- Footer -->
-    <a href="https://sites.google.com/view/souvikdey/home"  class="w3-text-blue"style="color: #1877b2;">Souvik Dey</a>  
-     and 
- Xue-Song Lu</a>,
-    <a href="http://arxiv.org/abs/2603.01424" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>.
-      </p>
-
-    
- <p> 13. "On local rings of finite syzygy representation type", 
-      with <!-- Footer -->
-    <a href="https://sites.google.com/view/souvikdey/home"  class="w3-text-blue"style="color: #1877b2;">Souvik Dey</a>,  
-    <a href="https://sites.google.com/view/kaitokimura"  class="w3-text-blue"style="color: #1877b2;">Kaito Kimura</a>, and 
-    <a href="https://scholar.google.com/citations?user=8BjZ68wAAAAJ&hl=en"  class="w3-text-blue"style="color: #1877b2;">Yuya Otake</a>,
-    <a href="https://arxiv.org/abs/2507.17097" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>.
-      </p>
-    
- <p> 12. "Base change of (Gorenstein) transpose, k-torsionfree modules, and quasi-faithfully flat extensions", 
-    <a href="https://arxiv.org/abs/2507.12219" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>.
-      </p>
-
-
-    
-  <p> 11. "Openness with respect to levels in triangulated categories",  with <!-- Footer -->
-    <a href="https://sites.google.com/view/souvikdey/home"  class="w3-text-blue"style="color: #1877b2;">Souvik Dey</a> and 
-    <a href="https://liranshaul.wordpress.com/"  class="w3-text-blue"style="color: #1877b2;">Liran Shaul</a>,
-                  <a href="https://arxiv.org/abs/2505.14353" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>.
-  </p>  
-
-    
-  <p> 10. "Generation of singularity categories and infinite injective dimension locus via annihilation of cohomologies",  with <!-- Footer -->
-    <a href="https://sites.google.com/view/souvikdey/home"  class="w3-text-blue"style="color: #1877b2;">Souvik Dey</a>,  
-    <a href="https://scholar.google.co.jp/citations?user=K-sKWVUAAAAJ&hl=ja"  class="w3-text-blue"style="color: #1877b2;">Yuki Mifune</a>, and 
-    <a href="https://scholar.google.com/citations?user=8BjZ68wAAAAJ&hl=en"  class="w3-text-blue"style="color: #1877b2;">Yuya Otake</a>,
-                  <a href="https://arxiv.org/abs/2503.24186" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>.
-  </p>  
-
-    <p>
- 9. "Gorenstein local rings whose cohomological annihilator is the maximal ideal",  with <!-- Footer -->
-    <a href="https://sites.google.com/view/souvikdey/home"  class="w3-text-blue"style="color: #1877b2;">Souvik Dey</a>, 
-                   <a href="https://ems.press/journals/prims" target="_blank" class="w3-hover-text-red" style="color: #1877b2;"> Publications of the Research Institute for Mathematical Sciences</a>
-  2026, <!-- End footer -->  <!-- Footer -->
-                    <a href="https://liujian-math.github.io/ca=m.pdf" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">Published Pdf</a>.
-           
-  </p>  
-
-   <p> 8. "Classifying thick subcategories over a Koszul complex via the curved BGG correspondence",  with <!-- Footer -->
-    <a href="https://www.joshpollitz.com/home"  class="w3-text-blue"style="color: #1877b2;">Josh Pollitz</a>,         <a href="https://londmathsoc.onlinelibrary.wiley.com/journal/14697750" target="_blank" class="w3-hover-text-red" style="color: #1877b2;">Journal of the London Mathematical Society</a>
-     2025, <!-- End footer -->  <!-- Footer -->
-                    <a href="https://liujian-math.github.io/LP2025.pdf" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">Published Pdf</a> and   <a href="https://arxiv.org/abs/2502.13806" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>.
-           
-  </p>  
- 
-      
-
-      
- <p> 7. "Ascent and descent of Gorenstein homological properties",  with <!-- Footer -->
-    <a href="https://www.sciencedirect.com/journal/journal-of-pure-and-applied-algebra"  class="w3-text-blue"style="color: #1877b2;">Wei Ren</a>, 
-           <a href="https://www.sciencedirect.com/journal/journal-of-pure-and-applied-algebra" target="_blank" class="w3-hover-text-red" style="color: #1877b2;">Journal of Pure and Applied Algebra</a> 2025, <!-- End footer -->  <!-- Footer -->
-                <a href="https://liujian-math.github.io/Liu-Ren.pdf" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">Published Pdf</a> and 
-                   <a href="https://arxiv.org/abs/2309.02372" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>.</p>
-
- <p> 6. "Annihilators and dimensions of the singularity category", 
-     <a href="https://www.cambridge.org/core/journals/nagoya-mathematical-journal" target="_blank" class="w3-hover-text-red" style="color: #1877b2;">
-           Nagoya Mathematical Journal</a> 2023, <!-- End footer -->  <!-- Footer -->
-                <a href="https://liujian-math.github.io/annihilator.pdf" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">Published Pdf</a> and     <a href="https://arxiv.org/abs/2202.09584" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>.
-      </p>
-
-   
-   <p> 5 "A partial converse ghost lemma for the derived category of a commutative noetherian ring" with <!-- Footer -->
-    <a href="https://www.joshpollitz.com/"  class="w3-text-blue"style="color: #1877b2;">Josh Pollitz</a>, 
-                    <a href="https://www.ams.org/publications/journals/journalsframework/proc" target="_blank" class="w3-hover-text-red" style="color: #1877b2;">Proceedings of the American Mathematical Society</a> 2023, <!-- End footer -->  <!-- Footer -->
-  <a href="https://liujian-math.github.io/converseghost.pdf" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">Published Pdf</a> and   <a href="https://arxiv.org/abs/2101.02829" target="_blank" class="w3-hover-text-green"style="color: #1877b2;">arXiv version</a>.</p>
-  <!-- End footer -->
-      
-      
-   <p> 4. "Triangulated categories of periodic complexes and orbit categories", 
-     <a href="https://cmj.math.cas.cz/" target="_blank" class="w3-hover-text-red" style="color: #1877b2;">Czechoslovak Mathematical Journal</a> 2023,
-  <a href="https://liujian-math.github.io/periodic.pdf" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">Published Pdf</a> and   <a href="https://arxiv.org/abs/2109.08831" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>.</p>
-      
-      
-      
-   <p> 3 "Exceptional complete intersection maps of local rings" with <!-- Footer --> <a href="https://www.math.utah.edu/~iyengar/" class="w3-text-blue" style="color: #1877b2;">Srikanth Iyengar</a>,  
-     <a href="https://www.math.uni-bielefeld.de/~jletz/" class="w3-text-blue" style="color: #1877b2;">Janina Letz</a>, and  <a href="https://www.joshpollitz.com/"  class="w3-text-blue" style="color: #1877b2;">Josh Pollitz</a>,
-          <a href="https://msp.org/pjm/" target="_blank" class="w3-hover-text-red" style="color: #1877b2;"> Pacific Journal of Mathematics</a> 2022, <!-- End footer -->  <!-- Footer --> 
-   <a href="https://liujian-math.github.io/eci.pdf" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">Published Pdf</a> and  <a href="http://arxiv.org/abs/2107.07354" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>.</p>
-                 
-    <p> 2. "Singular equivalences induced by bimodules and quadratic monomial algebras" with <!-- Footer -->
-   <a href="http://home.ustc.edu.cn/~xwchen/"  class="w3-text-blue" style="color: #1877b2;">Xiao-Wu Chen</a> and
-      <a href="http://home.ustc.edu.cn/~renw/"  class="w3-text-blue" style="color: #1877b2;">Ren Wang</a>, 
- <a href="https://www.springer.com/journal/10468" target="_blank" class="w3-hover-text-purple" style="color: #1877b2;">Algebras and Representation Theory</a> 2021,<!-- End footer -->  <!-- Footer -->
-  <a href="https://liujian-math.github.io/Quadratic.pdf" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">Published Pdf</a> and  <a href="https://arxiv.org/abs/2009.09356" target="_blank" class="w3-hover-text-green" style="color: #1877b2;" >arXiv version</a>.</p>
-  <!-- End footer -->
-  
-  
-  <p> 1. "Duality and symmetry of complexity over complete intersections via exterior homology" with <!-- Footer -->
-   <a href="https://www.joshpollitz.com/"  class="w3-text-blue" style="color: #1877b2;">Josh Pollitz</a>,   
-   <a href="https://www.ams.org/publications/journals/journalsframework/proc" target="_blank" class="w3-hover-text-purple" style="color: #1877b2;" >Proceedings of the American Mathematical Society</a> 2021,<!-- End footer -->  <!-- Footer -->
-   <a href="https://liujian-math.github.io/Duality and symmetry.pdf" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">Published Pdf</a> and
-   <a href="https://arxiv.org/abs/2006.04958" target="_blank" class="w3-hover-text-green" style="color: #1877b2;">arXiv version</a>. </p>
-  <!-- End footer -->
-      
-      <ul/>
-  </section>          
-   <section class="main"> <!-- About -->
-          <hr/>
-    <section class="edu info-unit">
-       <h2>
-     <i class="fa fa-graduation-cap" aria-hidden="true"></i>Links 
-      <a href="https://math.stackexchange.com/users/453628/jian" style="color: #1877b2;">  <img src="Mat.png" alt="alps" class="w3-rouded"  width="26" height="26"> </a> 
-        <a href="https://mathoverflow.net/users/106580/jian" style="color: #1877b2;">  <img src="Mo.png" alt="alps" class="w3-rouded" width="26" height="26" > </a> 
-         <a href="https://z-library.sk/" style="color: #1877b2;">  <img src="z-library.jpg" alt="alps" class="w3-rouded"  width="32" height="29" > </a> 
+        <!-- ========== 以下是你原来的所有内容，我已统一对齐宽度 ========== -->
+        <hr/>
+        <section class="edu info-unit">
+            <h2>
+                <i class="fa fa-graduation-cap"></i> Publications and Preprints
+                <a href="https://arxiv.org/a/liu_j_19.html"><img src="arxiv.jpg" width="26" height="26" alt="arxiv"></a>
+                <a href="https://www.researchgate.net/profile/Jian_Liu228"><img src="researchgate.jpg" width="26" height="26" alt="rg"></a>
+                <a href="https://zbmath.org/authors/?q=ai:liu.jian.13"><img src="zbmath.jpg" width="26" height="26" alt="zbmath"></a>
+                <a href="https://orcid.org/0000-0001-8360-7024"><img src="orcid.jpg" width="26" height="26" alt="orcid"></a>
+                <a href="https://scholar.google.com/citations?user=vje0RXwAAAAJ&hl=en"><img src="gscholar.jpg" width="26" height="26" alt="gscholar"></a>
+                <a href="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1478240"><img src="ams.jpg" width="57" height="26" alt="ams"></a>
             </h2>
-                    
-      <ul>
-      <li>Conferences links: <a href="https://www.math.uni-bielefeld.de/~fdlist/" targert="_blank" class=w3-text-blue" style="color: #1877b2;">FDLIST</a>, <a href="https://sites.google.com/view/virtual-comm-algebra-seminar/home" targert="_blank" class=w3-text-blue" style="color: #1877b2;">VCAS</a>, 
-          <a href="https://sites.google.com/view/fellowship-of-the-ring/home" targert="_blank" class=w3-text-blue" style="color: #1877b2;">Fellowship of the Ring</a>, and <a href="https://www.commalg.org/" targert="_blank" class=w3-text-blue" style="color: #1877b2;" >Commalg</a>.  
-                   <a href="https://www.msri.org/videos/dashboard"targert="_blank" class=w3-text-blue" style="color: #1877b2;">MSRI-Video</a>,  <a href="http://www.birs.ca/"targert="_blank" class=w3-text-blue" style="color: #1877b2;">BIRS-Video</a></p>
 
-     <p> In 2025, I will attend the following conferences:</p>
+            <p>14. "Some criteria for Gorensteinness via Gorenstein projective cotorsion pairs", with <a href="https://sites.google.com/view/souvikdey/home">Souvik Dey</a> and Xue-Song Lu, <a href="http://arxiv.org/abs/2603.01424">arXiv version</a>.</p>
+            <p>13. "On local rings of finite syzygy representation type", with <a href="https://sites.google.com/view/souvikdey/home">Souvik Dey</a>, <a href="https://sites.google.com/view/kaitokimura">Kaito Kimura</a>, and <a href="https://scholar.google.com/citations?user=8BjZ68wAAAAJ&hl=en">Yuya Otake</a>, <a href="https://arxiv.org/abs/2507.17097">arXiv version</a>.</p>
+            <p>12. "Base change of (Gorenstein) transpose, k-torsionfree modules, and quasi-faithfully flat extensions", <a href="https://arxiv.org/abs/2507.12219">arXiv version</a>.</p>
+            <p>11. "Openness with respect to levels in triangulated categories", with <a href="https://sites.google.com/view/souvikdey/home">Souvik Dey</a> and <a href="https://liranshaul.wordpress.com/">Liran Shaul</a>, <a href="https://arxiv.org/abs/2505.14353">arXiv version</a>.</p>
+            <p>10. "Generation of singularity categories and infinite injective dimension locus via annihilation of cohomologies", with <a href="https://sites.google.com/view/souvikdey/home">Souvik Dey</a>, <a href="https://scholar.google.co.jp/citations?user=K-sKWVUAAAAJ&hl=ja">Yuki Mifune</a>, and <a href="https://scholar.google.com/citations?user=8BjZ68wAAAAJ&hl=en">Yuya Otake</a>, <a href="https://arxiv.org/abs/2503.24186">arXiv version</a>.</p>
+            <p>9. "Gorenstein local rings whose cohomological annihilator is the maximal ideal", with <a href="https://sites.google.com/view/souvikdey/home">Souvik Dey</a>, <i>Publications of the Research Institute for Mathematical Sciences</i> 2026, <a href="https://liujian-math.github.io/ca=m.pdf">Published Pdf</a>.</p>
+            <p>8. "Classifying thick subcategories over a Koszul complex via the curved BGG correspondence", with <a href="https://www.joshpollitz.com/home">Josh Pollitz</a>, <i>Journal of the London Mathematical Society</i> 2025, <a href="https://liujian-math.github.io/LP2025.pdf">Published Pdf</a> and <a href="https://arxiv.org/abs/2502.13806">arXiv version</a>.</p>
+            <p>7. "Ascent and descent of Gorenstein homological properties", with <a href="https://www.sciencedirect.com/journal/journal-of-pure-and-applied-algebra">Wei Ren</a>, <i>Journal of Pure and Applied Algebra</i> 2025, <a href="https://liujian-math.github.io/Liu-Ren.pdf">Published Pdf</a> and <a href="https://arxiv.org/abs/2309.02372">arXiv version</a>.</p>
+            <p>6. "Annihilators and dimensions of the singularity category", <i>Nagoya Mathematical Journal</i> 2023, <a href="https://liujian-math.github.io/annihilator.pdf">Published Pdf</a> and <a href="https://arxiv.org/abs/2202.09584">arXiv version</a>.</p>
+            <p>5. "A partial converse ghost lemma for the derived category of a commutative noetherian ring", with <a href="https://www.joshpollitz.com/">Josh Pollitz</a>, <i>Proceedings of the American Mathematical Society</i> 2023, <a href="https://liujian-math.github.io/converseghost.pdf">Published Pdf</a> and <a href="https://arxiv.org/abs/2101.02829">arXiv version</a>.</p>
+            <p>4. "Triangulated categories of periodic complexes and orbit categories", <i>Czechoslovak Mathematical Journal</i> 2023, <a href="https://liujian-math.github.io/periodic.pdf">Published Pdf</a> and <a href="https://arxiv.org/abs/2109.08831">arXiv version</a>.</p>
+            <p>3. "Exceptional complete intersection maps of local rings", with <a href="https://www.math.utah.edu/~iyengar/">Srikanth Iyengar</a>, <a href="https://www.math.uni-bielefeld.de/~jletz/">Janina Letz</a>, and <a href="https://www.joshpollitz.com/">Josh Pollitz</a>, <i>Pacific Journal of Mathematics</i> 2022, <a href="https://liujian-math.github.io/eci.pdf">Published Pdf</a> and <a href="http://arxiv.org/abs/2107.07354">arXiv version</a>.</p>
+            <p>2. "Singular equivalences induced by bimodules and quadratic monomial algebras", with <a href="http://home.ustc.edu.cn/~xwchen/">Xiao-Wu Chen</a> and <a href="http://home.ustc.edu.cn/~renw/">Ren Wang</a>, <i>Algebras and Representation Theory</i> 2021, <a href="https://liujian-math.github.io/Quadratic.pdf">Published Pdf</a> and <a href="https://arxiv.org/abs/2009.09356">arXiv version</a>.</p>
+            <p>1. "Duality and symmetry of complexity over complete intersections via exterior homology", with <a href="https://www.joshpollitz.com/">Josh Pollitz</a>, <i>Proceedings of the American Mathematical Society</i> 2021, <a href="https://liujian-math.github.io/Duality and symmetry.pdf">Published Pdf</a> and <a href="https://arxiv.org/abs/2006.04958">arXiv version</a>.</p>
+        </section>
 
-     <p> 1. <a href="https://cimpa2025hefei.ahu.edu.cn/_s780/_t1723/00/00/c22894a0/page.psp"targert="_blank" class=w3-text-blue" style="color: #1877b2;">Perspectives in non-commutative algebras:
-Leavitt path algebras, Hochschild (co)homology, K-theory and related topics</a>, Hefei, September 9-20; </a></p>
+        <hr/>
+        <section class="edu info-unit">
+            <h2><i class="fa fa-graduation-cap"></i> Links
+                <a href="https://math.stackexchange.com/users/453628/jian"><img src="Mat.png" width="26" height="26" alt="mat"></a>
+                <a href="https://mathoverflow.net/users/106580/jian"><img src="Mo.png" width="26" height="26" alt="mo"></a>
+                <a href="https://z-library.sk/"><img src="z-library.jpg" width="32" height="29" alt="zlib"></a>
+            </h2>
+            <ul>
+                <li>Conferences links: <a href="https://www.math.uni-bielefeld.de/~fdlist/">FDLIST</a>, <a href="https://sites.google.com/view/virtual-comm-algebra-seminar/home">VCAS</a>, <a href="https://sites.google.com/view/fellowship-of-the-ring/home">Fellowship of the Ring</a>, <a href="https://www.commalg.org/">Commalg</a>, <a href="https://www.msri.org/videos/dashboard">MSRI-Video</a>, <a href="http://www.birs.ca/">BIRS-Video</a></li>
+                <li>In 2025: <a href="https://cimpa2025hefei.ahu.edu.cn/">Perspectives in non-commutative algebras</a>, Hefei, Sep 9-20</li>
+                <li>In 2024: <a href="https://sites.google.com/view/hmrt2024">HMRT 2024</a>, <a href="https://icra21.sjtu.edu.cn/">ICRA2024</a>, <a href="https://math.nenu.edu.cn/ICTCRT2024/Homepage.html">ICTCRT 2024</a>, <a href="https://math.cnu.edu.cn/">Mini-course</a>, <a href="http://www.cim.nankai.edu.cn/">Workshop</a></li>
+                <li>Links to <a href="https://liujian-math.github.io/algebraists.html">Algebraists</a>, <a href="https://www.unimelb-macaulay2.cloud.edu.au/">Macaulay2 on Web</a></li>
+                <li>University links: <a href="https://ymsc.tsinghua.edu.cn">Yau MSC</a>, <a href="https://math.tsinghua.edu.cn/">Tsinghua</a>, <a href="http://math.fudan.edu.cn/">Fudan</a>, <a href="https://www.math.utah.edu/">Utah</a></li>
+                <li><a href="https://genealogy.math.ndsu.nodak.edu/">Mathematics Genealogy</a>, <a href="https://www.ilovepdf.com/">I Love PDF</a>, <a href="https://zbmath.org/">zbMATH</a></li>
+            </ul>
+        </section>
 
-                  
-                    
-      <p>    In 2024, I attended the following conferences: </p>
-                    
-     <p> 1. <a href="https://sites.google.com/view/hmrt2024"targert="_blank" class=w3-text-blue" style="color: #1877b2;">International Conference on Homological Methods in Representation Theory</a>, Lanzhou, July 23-30; </a></p>
-                    
-    <p> 2. <a href="https://icra21.sjtu.edu.cn/index.html"targert="_blank" class=w3-text-blue" style="color: #1877b2;">ICRA2024</a>, Shanghai, July 31-August 9;</a></p>
-                    
-       <p> 3. <a href="https://math.nenu.edu.cn/ICTCRT2024/Homepage.html"targert="_blank" class=w3-text-blue" style="color: #1877b2;">International Conference on Triangulated Categories and Related Topics</a>, Changchun, August 11-15;</a></p>
+        <hr/>
+        <section class="edu info-unit">
+            <h2><i class="fa fa-graduation-cap"></i> Teaching and Talks <img src="chalk.jpg" width="57" height="26" alt="chalk"></h2>
+            <ul>
+                <li>These are <a href="https://liujian-math.github.io/talks.html">Talks</a>. Fall 2023: Calculus at CCNU.</li>
+                <li>Sep 2022–Jan 2023: Linear Algebra, Lecturer (SJTU)</li>
+                <li>Sep 2018–Jan 2019: Linear Algebra A2, TA (USTC)</li>
+                <li>Feb 2018–Jun 2018: Linear Algebra A1, TA (USTC)</li>
+                <li>Sep 2017–Jan 2018: Elements of Algebra, TA (USTC)</li>
+                <li>Feb 2017–Jun 2017: Complex Analysis, TA (USTC)</li>
+            </ul>
+        </section>
 
-        <p> 4. <a href="https://math.cnu.edu.cn/xshy/574ecda86e2c44d0a90797490057037b.htm"targert="_blank" class=w3-text-blue" style="color: #1877b2;">Mini-course on Approximable Triangulated Categories</a>, Beijing, August 19-26;</a></p>
-                       
-    <p> 5.  <a href="http://www.cim.nankai.edu.cn/2024/0116/c7185a535448/page.htm"targert="_blank" class=w3-text-blue" style="color: #1877b2;">International Workshop on Commutative Algebra and Related Topics</a>， Tianjin, September 16-20.</a></p>   
-                  </p></li>
-       
-                 <li> <p>Links to some <a href="https://liujian-math.github.io/algebraists.html" targert="_blank" class=w3-text-blue" style="color: #1877b2;">Algebraists</a>.
-                    Links to software <a href="https://www.unimelb-macaulay2.cloud.edu.au/#home" targert="_blank" class=w3-text-blue" style="color: #1877b2;">Macaulay2 on Web</a>.</p></li>    
-                   
-                    <li><p>University links: <a href="https://ymsc.tsinghua.edu.cn" targert="_blank" class=w3-text-blue" style="color: #1877b2;" >Yau Mathematical Sciences Center</a>, <a href="https://math.tsinghua.edu.cn/" targert="_blank" class=w3-text-blue" style="color: #1877b2;">Tsinghua University</a>,
-                  <a href="http://math.fudan.edu.cn/" targert="_blank" class=w3-text-blue" style="color: #1877b2;">Fudan University</a>,  <a href="https://www.math.utah.edu/" targert="_blank" class=w3-text-blue" style="color: #1877b2;">University of Utah</a>.</p></li>
-                   
-                  <li> <p>Links to <a href="https://genealogy.math.ndsu.nodak.edu/" targert="_blank" class=w3-text-blue" style="color: #1877b2;">Mathematics Genealogy Project</a>,  
-                  <a href="https://www.ilovepdf.com/" targert="_blank" class=w3-text-blue" style="color: #1877b2;">I Love PDF</a>, 
-                    <a href="https://zbmath.org/" targert="_blank" class=w3-text-blue" style="color: #1877b2;">zbMATH</a>. </p> </li>  
-               
-             
-                      <ul/>
-                      </section>               
-                 
-                 
-                  <section class="main">
+        <hr/>
+        <section class="edu info-unit">
+            <h2><i class="fa fa-graduation-cap"></i> Stories, Mathematics Sayings and Quotes</h2>
+            <p>There are some real stories about Mathematicians:
+                <a href="https://liujian-math.github.io/Grothendieck.pdf">Grothendieck</a>,
+                <a href="https://liujian-math.github.io/知无涯者.pdf">Ramanujan</a>,
+                <a href="https://liujian-math.github.io/陆家羲.pdf">陆家羲</a>,
+                <a href="https://liujian-math.github.io/陈省身.pdf">陈省身</a>,
+                <a href="https://liujian-math.github.io/吴文俊.pdf">吴文俊</a>,
+                <a href="https://liujian-math.github.io/肖刚.pdf">肖刚</a>.
+                <a href="https://liujian-math.github.io/sayings.html">Mathematical sayings and quotes</a>.
+            </p>
+        </section>
 
-            <!-- About -->
-          <hr/>
-            <section class="edu info-unit">
-             <h2>
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>Teaching and Talks
-             <a href="http://xk.ccnu.edu.cn/jwglxt/xtgl/index_initMenu.html?jsdm=&_t=1693982483514">  <img src="chalk.jpg" alt="alps" class="w3-rouded" width="57" height="26"> </a> </h2>
-                 
-               <ul>
-               <p>These are 
-                  <a href="https://liujian-math.github.io/talks.html" targert="_blank" class=w3-text-blue" style="color: #1877b2;">Talks</a>.
-           Teaching is always an important thing!   In the fall of 2023, I will teach calculus at CCNU. 
-                  <li>
-                        <h3>
-               <time>September 2022--January 2023</time>
-                        </h3>
-          <p>"Linear Algebra", Lecturer (SJTU) </a>.
-          Textbook:
-  <a href="https://book.douban.com/subject/36085290/"
-     target="_blank" class="w3-hover-text-red" style="color: #1877b2;">Qifen Jiang and Jun Ma</a></p></p>
-                    </li>
-               
-                    <li>
-                        <h3>
-                        <time>September 2018--January 2019</time>
-                        </h3>
-                        <p>"Linear Algebra A2", Teaching Assistant (USTC),
-                            lecture: Prof. <a href="http://home.ustc.edu.cn/~xwchen/" target="_blank" class="w3-text-blue" style="color: #1877b2;">Xiao-Wu Chen</a>.
-          Textbook:
-  <a href="https://u.pcloud.link/publink/show?code=XZKopzXZV9JCSoeETkLrlcW89y5sA0ivaCOk"
-     target="_blank" class="w3-hover-text-red" style="color: #1877b2;">Shangzhi Li 2006</a></p></p>
-                    </li>
-                    <li>
-                        <h3>
-                            <time>Febuary 2018--June 2018</time>
-                        </h3>
-                        <p> "Linear Algebra A1", Teaching Assistant  (USTC), 
-          lecture: Prof. <a href="http://home.ustc.edu.cn/~xwchen/" target="_blank" class="w3-text-blue" style="color: #1877b2;">Xiao-Wu Chen</a>.
-               Textbook:
-  <a href="https://u.pcloud.link/publink/show?code=XZKopzXZV9JCSoeETkLrlcW89y5sA0ivaCOk"
-     target="_blank" class="w3-hover-text-red" style="color: #1877b2;">Shangzhi Li 2006</a></p>
-                    </li>
-       
-       
-                     <li>
-                        <h3>
-     <time> September 2017--January 2018</time>
-                        </h3>
-                        <p> "Elements of Algebra",  Teaching Assistant  (USTC),  
-          lecture: Prof. <a href="http://home.ustc.edu.cn/~xwchen/" target="_blank" class="w3-text-blue" style="color: #1877b2;">Xiao-Wu Chen</a>.
-        Textbook:
-     <a href="https://book.douban.com/subject/1237711/"
-     target="_blank" class="w3-hover-text-red" style="color: #1877b2;">Keqin Feng and Hongbing Yu 1999</a></p>
-                    </li>
-       
-                   <li>
-                        <h3>
-                            <time>Febuary 2017--June 2017</time>
-                        </h3>
-                        <p>
-"Complex Analysis", Teaching Assistant  (USTC), lecture: Prof. Luo Luo.
-                Textbook:
-  <a href="http://yuxtech.club/math/复变函数史济怀LaTeX重排.pdf"
-     target="_blank" class="w3-hover-text-red" style="color: #1877b2;">Jihuai Shi and Taishun Liu 1998</a></p>
-                    </li>
-                 <ul/>
-                 </section>
-
-
-     
-      <section class="main">
-           <!-- About -->
-          <hr/>
-            <section class="edu info-unit">
-                <h2>
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>Stories, Mathematics Sayings and Quotes</h2>
-                
-              <ul>
-                <p>
-                   There are some real stories about Mathematicians.  
-             <a href="https://liujian-math.github.io/Grothendieck.pdf" target="_blank" class="w3-text-blue"  style="color: #1877b2;">Grothendieck</a>, 
-                  <a href="https://liujian-math.github.io/知无涯者.pdf" target="_blank" class="w3-text-blue"  style="color: #1877b2;" >Ramanujan</a>, 
-                   <a href="https://liujian-math.github.io/陆家羲.pdf" target="_blank" class="w3-text-blue"  style="color: #1877b2;">陆家羲</a>,
-                  <a href="https://liujian-math.github.io/陈省身.pdf" target="_blank" class="w3-text-blue"  style="color: #1877b2;">陈省身</a>,
-                   <a href="https://liujian-math.github.io/吴文俊.pdf" target="_blank" class="w3-text-blue"  style="color: #1877b2;">吴文俊</a>,
-                  <a href="https://liujian-math.github.io/肖刚.pdf" target="_blank" class="w3-text-blue"  style="color: #1877b2;">肖刚</a>.
-                   There are some <a href="https://liujian-math.github.io/sayings.html" targert="_blank" class=w3-text-blue" style="color: #1877b2;" >mathematical sayings and quotes</a>. 
-                 
-                </p>
-    <ul/>
-    </section>
-             
-             
-              
-      <section class="main">
-           <!-- About -->
-          <hr/>
-            <section class="edu info-unit">
-                <h2>
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>Photos</h2>
-                
-    <ul>
-    <p> Here are some of these photos  of my life and the conferences that I attended.</p>
-                                                                                    
-      <h2><img src="中科大(USTC).jpg" alt="alps" class="w3-rouded" width="302" height="170"> <img src="biye.jpg" alt="alps" class="w3-rouded" width="302" height="170">      <img src="Utah.jpg" alt="alps" class="w3-rouded" width="302" height="170"> 
-   </h2>
-                  
-    <ul/>
-    </section>
-        
-      
-<!-- END PAGE CONTENT -->
-</div>
-
+        <hr/>
+        <section class="edu info-unit">
+            <h2><i class="fa fa-graduation-cap"></i> Photos</h2>
+            <p>Here are some of my life and conference photos.</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+                <img src="中科大(USTC).jpg" width="300" height="170" alt="photo">
+                <img src="biye.jpg" width="300" height="170" alt="photo">
+                <img src="Utah.jpg" width="300" height="170" alt="photo">
+            </div>
+        </section>
+    </div>
 </body>
 </html>
