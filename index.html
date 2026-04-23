@@ -111,6 +111,27 @@ p {
 li {
     margin-bottom: 5px;
 }
+        /* ========== 手机移动端专属优化：图片不挤文字，排版和谐 ========== */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column !important;
+    }
+    .profile-box {
+        width: 65% !important;
+        margin: 0 auto 22px auto !important;
+    }
+    .about-text {
+        width: 100% !important;
+        line-height: 1.65 !important;
+        font-size: 16.5px !important;
+    }
+}
+
+/* 强制全手机电脑统一Palatino好看字体，不再变Georgia */
+body {
+    font-family: "Palatino Linotype", Book Antiqua, Georgia, serif !important;
+}
+
 </style>
 </head>
 
