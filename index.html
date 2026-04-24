@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-/* 🔥 最优字体：EB Garamond 学术高级款 */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
+/* 学术优雅字体 EB Garamond */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
 
 body {
-     font-family: "Latin Modern Roman", "Computer Modern", "Palatino Linotype", Georgia, serif;
+    font-family: 'EB Garamond', "Palatino Linotype", Georgia, serif;
     margin: 0 5%;
     background-color: #f0f0f0;
-    line-height: 1.3; /* 全局行间距缩小 */
+    line-height: 1.3;
     font-size: 16.5px;
     
-    /* 👈 这里加深！不再淡！ */
-    color: #111; 
-    font-weight: 500;
+    /* ✅ 正常粗细 + 柔和深灰，不淡不刺眼 */
+    color: #222; 
+    font-weight: 400;
 } 
 
 .content {
@@ -38,14 +38,14 @@ header {
 h1, h2 {
     font-family: 'EB Garamond', serif;
     color: #1877b2;
-    font-weight: 600; /* 标题更粗一点 */
+    font-weight: 600;
     margin-top: 0;
 }
 
 a {
     color: #1877b2;
     text-decoration: none;
-    font-weight: 500; /* 链接也加深 */
+    font-weight: 400;
 }
 
 a:hover {
@@ -54,7 +54,7 @@ a:hover {
 
 hr {
     border: 1px solid #ddd;
-    margin: 20px 0; /* 分割线间距缩小 */
+    margin: 20px 0;
 }
 
 .info-unit {
@@ -79,33 +79,33 @@ hr {
 .email-small {
     font-size: 15px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
 }
 
-/* 👑 关键：文字靠上对齐，最协调 */
-        .about-container {
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-            margin-top: 10px;
-        }
+/* 简介文字与照片顶部对齐 */
+.about-container {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    margin-top: 10px;
+}
 
 .about-text {
     flex: 1;
     text-align: left;
-    line-height: 1.5; /* 简介行间距缩小 */
+    line-height: 1.5;
     font-size: 16.5px;
 }
 
-/* 🔥 核心： Publications 专用样式，行距大幅缩小 */
+/* 论文列表紧凑美观行距 */
 .publications p {
     line-height: 1.5 !important;
-    margin: 5px 0 !important; /* 论文条目之间的距离 */
+    margin: 5px 0 !important;
     padding: 0 !important;
 }
-/* 期刊名字加粗变色 */
+
 .publications i {
-  font-weight: 500;
+  font-weight: 400;
     color: #111;
 }
 
@@ -116,7 +116,8 @@ p {
 li {
     margin-bottom: 5px;
 }
-        /* ========== 手机移动端专属优化：图片不挤文字，排版和谐 ========== */
+
+/* 手机自适应 */
 @media screen and (max-width: 768px) {
     .about-container {
         flex-direction: column !important;
@@ -130,11 +131,6 @@ li {
         line-height: 1.65 !important;
         font-size: 16.5px !important;
     }
-}
-
-/* 强制全手机电脑统一Palatino好看字体，不再变Georgia */
-body {
-    font-family: "Palatino Linotype", Book Antiqua, Georgia, serif !important;
 }
 
 </style>
@@ -180,7 +176,6 @@ body {
         </section>
 
         <hr/>
-        <!-- 给 Publications 添加专用类名 -->
         <section class="edu info-unit publications">
             <h2>
                 Publications and Preprints
