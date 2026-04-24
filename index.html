@@ -128,10 +128,11 @@ h2 img {
     .about-container {
         flex-direction: column !important;
     }
-    .profile-box {
-        width: 65% !important;
-        margin: 0 auto 22px auto !important;
-    }
+    /* 👇👇 只有这一行我改了 👇👇 */
+    .about-container > div:first-child {
+    width: 65% !important;
+    margin: 0 auto 22px auto !important;
+}
     .about-text {
         width: 100% !important;
         line-height: 1.65 !important;
