@@ -1,42 +1,74 @@
-    <!-- Conferences Talks -->
-  <style>
-   body {
- font-family: "Georgia", serif; /* 使用非黑体字体，如Raleway或衬线字体 */
-  text-align: left;
-    margin: 0 10%; /* 两侧留白 */
-            background-color: #f0f0f0; /* 浅灰色背景 */
-   }
-   
+<!-- Conferences Talks -->
+<style>
+body {
+    font-family: "Georgia", serif;
+    text-align: left;
+    margin: 0;
+    background-color: #f0f0f0;
+}
 
 .content {
-    max-width: 900px; /* 限制内容宽度 */
-    margin: 0 auto; /* 水平居中 */
-    padding: 20px; /* 内边距 */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
-profile-image {
-    flex-shrink: 0; /* 防止图片缩小 */
-    margin-right: 20px; /* 图片与文字之间的间距 */
-  }
 
- </style>
-          <hr/>
-            <section class="edu info-unit">
-       
-                 <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
-                          Wuhan, East Lake
-                <img src="donghu1.jpg" width="392" height="230" alt="photo">
-              <img src="donghu2.jpg" width="392" height="230" alt="photo">
-                        <img src="donghu3.jpg" width="392" height="230" alt="photo">
+.photo-section {
+    margin-bottom: 40px;
+}
 
+.photo-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
 
-    Guilin                 
-                      <img src="guilin1.jpg" width="392" height="230" alt="photo">
-                      <img src="guilin2.jpg" width="285" height="167" alt="photo">
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+}
 
+.photo-grid img {
+    width: 100%;
+    max-width: 392px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
 
-                     
-                     Zhangjiajie
-                      <img src="zhangjiajie.jpg" width="285" height="167" alt="photo">
-            </section>
-    
+.photo-grid img:hover {
+    transform: scale(1.05);
+}
+</style>
 
+<section class="content">
+
+    <div class="photo-section">
+        <h2>Wuhan, East Lake</h2>
+        <div class="photo-grid">
+            <img src="donghu1.jpg" alt="Wuhan East Lake 1">
+            <img src="donghu2.jpg" alt="Wuhan East Lake 2">
+            <img src="donghu3.jpg" alt="Wuhan East Lake 3">
+        </div>
+    </div>
+
+    <div class="photo-section">
+        <h2>Guilin</h2>
+        <div class="photo-grid">
+            <img src="guilin1.jpg" alt="Guilin 1">
+            <img src="guilin2.jpg" alt="Guilin 2">
+        </div>
+    </div>
+
+    <div class="photo-section">
+        <h2>Zhangjiajie</h2>
+        <div class="photo-grid">
+            <img src="zhangjiajie.jpg" alt="Zhangjiajie">
+        </div>
+    </div>
+
+</section>
