@@ -263,10 +263,10 @@ h2 img {
        <style>
 /* Photos gallery */
 .photo-gallery {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
     gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    justify-content: center;
 }
 
 .photo-gallery img {
