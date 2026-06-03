@@ -260,15 +260,49 @@ h2 img {
         </section>
 
         <hr/>
-        <section class="edu info-unit">
-            <h2> Photos</h2>
-            <p>Here are some of my life and conference photos. I also collected some very beautiful natural landscape <a href="https://liujian-math.github.io/photos.html">photos</a> of China. </p>
-            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
-                <img src="中科大(USTC).jpg" width="285" height="167" alt="photo">
-                <img src="biye.jpg" width="285" height="167" alt="photo">
-                <img src="Utah.jpg" width="285" height="167" alt="photo">
-            </div>
-        </section>
+       <style>
+/* Photos gallery */
+.photo-gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.photo-gallery img {
+    width: 285px;
+    height: 167px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* 鼠标悬停放大 */
+.photo-gallery img:hover {
+    transform: scale(1.12);
+    position: relative;
+    z-index: 10;
+}
+</style>
+
+<section class="edu info-unit">
+    <h2>Photos</h2>
+
+    <p>
+        Here are some of my life and conference photos.
+        I also collected some very beautiful natural landscape
+        <a href="https://liujian-math.github.io/photos.html">photos</a>
+        of China.
+    </p>
+
+    <div class="photo-gallery">
+        <img src="中科大(USTC).jpg" alt="USTC">
+        <img src="biye.jpg" alt="Graduation">
+        <img src="Utah.jpg" alt="Utah">
+    </div>
+</section>
     </div>
 </body>
 </html>
