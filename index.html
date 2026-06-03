@@ -96,7 +96,24 @@ hr {
     line-height: 1.5;
     font-size: 16.5px;
 }
+.pub-icon {
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+}
 
+.pub-icon:hover {
+    animation: jump 0.45s ease;
+}
+
+@keyframes jump {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-8px); }
+    60%  { transform: translateY(0); }
+    80%  { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
+}
+
+        
 /* 论文列表紧凑美观行距 */
 .publications p {
     line-height: 1.5 !important;
@@ -189,15 +206,15 @@ h2 img {
 
         <hr/>
         <section class="edu info-unit publications">
-            <h2>
-                Publications and Preprints
-                <a href="https://arxiv.org/a/liu_j_19.html"><img src="arxiv.png" width="55" height="33" alt="arxiv"></a>
-                <a href="https://zbmath.org/authors/?q=ai:liu.jian.13"><img src="zbmath.jpg" width="26" height="26" alt="zbmath"></a>
-                <a href="https://www.researchgate.net/profile/Jian_Liu228"><img src="researchgate.png" width="26" height="26" alt="rg"></a>
-                <a href="https://orcid.org/0000-0001-8360-7024"><img src="orcid.png" width="26" height="26" alt="orcid"></a>
-                <a href="https://scholar.google.com/citations?user=vje0RXwAAAAJ&hl=en"><img src="google-s.png" width="26" height="26" alt="google-s"></a>
-                <a href="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1478240"><img src="ams.png" width="57" height="26" alt="ams"></a>
-            </h2>
+       <h2>
+    Publications and Preprints
+    <a href="https://arxiv.org/a/liu_j_19.html"><img class="pub-icon" src="arxiv.png" width="55" height="33" alt="arxiv"></a>
+    <a href="https://zbmath.org/authors/?q=ai:liu.jian.13"><img class="pub-icon" src="zbmath.jpg" width="26" height="26" alt="zbmath"></a>
+    <a href="https://www.researchgate.net/profile/Jian_Liu228"><img class="pub-icon" src="researchgate.png" width="26" height="26" alt="rg"></a>
+    <a href="https://orcid.org/0000-0001-8360-7024"><img class="pub-icon" src="orcid.png" width="26" height="26" alt="orcid"></a>
+    <a href="https://scholar.google.com/citations?user=vje0RXwAAAAJ&hl=en"><img class="pub-icon" src="google-s.png" width="26" height="26" alt="google-s"></a>
+    <a href="https://mathscinet.ams.org/mathscinet/search/author.html?mrauthid=1478240"><img class="pub-icon" src="ams.png" width="57" height="26" alt="ams"></a>
+</h2>
 
             <p>14. Some criteria for Gorensteinness via Gorenstein projective cotorsion pairs, with <a href="https://sites.google.com/view/souvikdey/home">Souvik Dey</a> and Xue-Song Lu, <a href="http://arxiv.org/abs/2603.01424">arXiv version</a>.</p>
             <p>13. On local rings of finite syzygy representation type, with <a href="https://sites.google.com/view/souvikdey/home">Souvik Dey</a>, <a href="https://sites.google.com/view/kaitokimura">Kaito Kimura</a>, and <a href="https://scholar.google.com/citations?user=8BjZ68wAAAAJ&hl=en">Yuya Otake</a>, <a href="https://arxiv.org/abs/2507.17097">arXiv version</a>.</p>
